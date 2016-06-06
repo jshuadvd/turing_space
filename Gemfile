@@ -14,6 +14,7 @@ gem "figaro"
 gem 'omniauth-twitter'
 gem 'capybara'
 gem 'faraday', '~> 0.9.2'
+gem 'will_paginate', '~> 3.1.0'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.4'
@@ -28,4 +29,6 @@ end
 group :test do
   gem 'shoulda-matchers', '~> 3.1'
   gem 'database_cleaner'
+  gem 'vcr'
+  gem 'webmock'
 end
