@@ -13,6 +13,7 @@ gem 'simplecov', :require => false, :group => :test
 gem "figaro"
 gem 'omniauth-twitter'
 gem 'capybara'
+gem 'faraday', '~> 0.9.2'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.4'
