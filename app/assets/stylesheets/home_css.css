@@ -21,7 +21,7 @@
   font-size: 40px;
 }
 
-li {
+#home-page-list > li {
   font-family: 'Vollkorn', serif;
   font-size: 20px;
 }
