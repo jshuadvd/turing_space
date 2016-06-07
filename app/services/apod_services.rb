@@ -10,6 +10,7 @@ class ApodServices
   private
     def connection
       @_connection
+    end
 
     def parse(response)
       JSON.parse(response.body, symbolize_names: true)

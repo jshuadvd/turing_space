@@ -1,0 +1,27 @@
+#picture_of_the_day {
+  width: 600px;
+  height: 600px;
+}
+
+.picture_of_the_day_title {
+  text-transform: uppercase;
+  font-family: 'Unica One', cursive;
+  margin-top: 20px;
+  font-size: 50px;
+}
+
+#picture_of_the_day_text {
+  font-family: 'Vollkorn', serif;
+  font-size: 20px;
+}
+
+#picture_of_the_day_heading{
+  text-transform: uppercase;
+  font-family: 'Unica One', cursive;
+  font-size: 40px;
+}
+
+li {
+  font-family: 'Vollkorn', serif;
+  font-size: 20px;
+}

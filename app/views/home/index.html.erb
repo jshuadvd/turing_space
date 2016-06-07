@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row text-center">
+    <%= image_tag(@picture_of_the_day[:hdurl], id:"picture_of_the_day")%>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 text-left">
+      <p class="picture_of_the_day_title">
+        picture of the day <i class="fa fa-camera-retro" aria-hidden="true"></i>
+      </p>
+    </div>
+    <div class="col-md-6 text-right">
+      <p class="picture_of_the_day_title">
+        <%=  date_format(@picture_of_the_day[:date])%>
+      </p>
+    </div>
+  </div>
+
+  <div class="row" id="picture_of_the_day_text">
+    <%=  @picture_of_the_day[:explanation] %>
+  </div>
+
+  <div class="row">
+    <p class="picture_of_the_day_title text-center">
+      Want to know more about space?
+    </p>
+  </div>
+
+  <div class="row">
+    <p id="picture_of_the_day_heading">Login to discover...</p>
+    <ul>
+      <li>Pictures taken from Spirit, Opportunity, and Curiousity!</li>
+      <li>Who is in the ISS (International Space Station)!</li>
+      <li>Current location of the ISS and more!</li>
+    </ul>
+  </div>
+</div>
