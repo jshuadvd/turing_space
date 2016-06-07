@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: turing_space_production
-  username: turing_space
-  password: <%= ENV['TURING_SPACE_DATABASE_PASSWORD'] %>
