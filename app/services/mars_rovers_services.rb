@@ -4,15 +4,42 @@ class MarsRoversServices
   end
 
   def curiousity_pictures
-    # https://api.nasa.gov/mars-photos/api/v1/rovers/curiousity/photos?earth_date=2015-6-3&api_key=DEMO_KEY
+    path = "/mars-photos/api/v1/rovers/curiosity/photos"
+
+    response = connection.get do |req|
+      req.url path
+      req.params['sol'] = 1003
+      req.params['api_key'] = ENV["nasa_api_key"]
+      req.params['camera'] = "NAVCAM"
+    end
+
+    parse(response)
   end
 
   def opportunity_pictures
-    # https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?earth_date=2015-6-3&api_key=DEMO_KEY
+    path = "/mars-photos/api/v1/rovers/opportunity/photos"
+
+    response = connection.get do |req|
+      req.url path
+      req.params['sol'] = 950
+      req.params['api_key'] = ENV["nasa_api_key"]
+      req.params['camera'] = "NAVCAM"
+    end
+
+    parse(response)
   end
 
   def spirit_pictures
-    # https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?earth_date=2015-6-3&api_key=DEMO_KEY
+    path = "/mars-photos/api/v1/rovers/spirit/photos"
+
+    response = connection.get do |req|
+      req.url path
+      req.params['sol'] = 10
+      req.params['api_key'] = ENV["nasa_api_key"]
+      req.params['camera'] = "NAVCAM"
+    end
+
+    parse(response)
   end
 
   private
@@ -21,12 +48,6 @@ class MarsRoversServices
     end
 
     def parse(response)
-      JSON.parse(response.body, symbolize_names: true)
+      JSON.parse(response.body, symbolize_names: true)[:photos]
     end
 end
-
-# ROVERS: Curiousity, Opportunity, Spirit
-# Figure out a way how to make the dates dynamic to produce random images
-
-# params["api_key"] = ENV["nasa_api_key"]
-# https://api.nasa.gov/api.html#MarsPhotos

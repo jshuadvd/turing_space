@@ -17,3 +17,7 @@
 body  {
   font-family: 'Vollkorn', serif;
 }
+
+.navbar {
+  height: 50px;
+}
